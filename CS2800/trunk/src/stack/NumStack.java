@@ -13,6 +13,4 @@ public class NumStack {
     return size == 0;
   }
 
-
-
 }
