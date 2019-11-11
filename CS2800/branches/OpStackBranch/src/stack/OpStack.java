@@ -17,7 +17,7 @@ public class OpStack {
   }
 
   public Symbol pop() {
-    Entry floatval = opStack.pop();
-    return floatval.getSymbol();
+    Entry symbolval = opStack.pop();
+    return symbolval.getSymbol();
   }
 }
