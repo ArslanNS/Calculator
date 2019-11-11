@@ -20,7 +20,7 @@ public class TestOpStack {
    * The test allows for the creation of a push() function which loads up a stack.
    */
   @Test
-  public void pushTest() { // TEST 31 - Pushing a symbol test.
+  public void opStackPushTest() { // TEST 31 - Pushing a symbol test.
     OpStack test = new OpStack();
     test.push(Symbol.TIMES);
     assertFalse("isEmpty() method did not return false for a non-empty stack", test.isEmpty());
@@ -30,7 +30,7 @@ public class TestOpStack {
    * The test uses isEmpty to check whether pushing then popping leaves the stack empty.
    */
   @Test
-  public void popTest() { // TEST 32 - Removing a value test.
+  public void opStackPopTest() { // TEST 32 - Removing a value test.
     OpStack test = new OpStack();
     test.push(Symbol.DIVIDE);
     Symbol symbolPop = test.pop();
