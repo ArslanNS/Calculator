@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import stack.StrStack;
 
-import stack.Symbol;
 
 /**TDD for TestNumStack.java
  * @author zfac237
