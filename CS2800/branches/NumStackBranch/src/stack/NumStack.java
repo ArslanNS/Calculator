@@ -1,6 +1,6 @@
 package stack;
 
-/**TDD for StrStack.java
+/**TDD for NumStack.java
  * @author zfac237
  *
  */
@@ -29,7 +29,7 @@ public class NumStack {
     return numStack.isEmpty();
   }
 
-  /** removes the last value on the stack and converts value to string using getString.
+  /** removes the last value on the stack and converts value to string using getFloat.
    * @return The last Entry object in the stack.
    * @throws EmptyStackException stack is 0 or below then the stack is empty and you cannot pop.
    */
