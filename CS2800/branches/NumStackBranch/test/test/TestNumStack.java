@@ -25,7 +25,7 @@ public class TestNumStack {
   }
 
   /** Creates a Stack object and checks if the Stack items can be removed after being pushed.
-   * The test uses isEmpty to check whether pushing then popping leaves the stack empty.
+   * The test checks if the value pushed is equal to 42.74f.
    */
   @Test
   public void numStackPopTest() { // TEST 30 - Removing a value test.
