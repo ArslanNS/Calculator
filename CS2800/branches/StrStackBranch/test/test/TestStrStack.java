@@ -8,8 +8,7 @@ import org.junit.Test;
 
 import stack.StrStack;
 
-
-/**TDD for TestNumStack.java
+/**TDD for TestStrStack.java
  * @author zfac237
  *
  */
@@ -26,7 +25,7 @@ public class TestStrStack {
   }
 
   /** Creates a Stack object and checks if the Stack items can be removed after being pushed.
-   * The test uses isEmpty to check whether pushing then popping leaves the stack empty.
+   * The test checks if the value pushed is equal to "hello world".
    */
   @Test
   public void stackStackPopTest() { // TEST 34 - Removing a value test.
