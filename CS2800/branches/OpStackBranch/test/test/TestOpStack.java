@@ -10,7 +10,7 @@ import stack.OpStack;
 
 import stack.Symbol;
 
-/**TDD for TestNumStack.java
+/**TDD for TestOpStack.java
  * @author zfac237
  *
  */
@@ -27,7 +27,7 @@ public class TestOpStack {
   }
 
   /** Creates a Stack object and checks if the Stack items can be removed after being pushed.
-   * The test uses isEmpty to check whether pushing then popping leaves the stack empty.
+   * The test checks if the value popped is equal to the symbol "/".
    */
   @Test
   public void opStackPopTest() { // TEST 32 - Removing a value test.
