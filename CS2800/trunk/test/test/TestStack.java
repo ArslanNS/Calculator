@@ -18,7 +18,7 @@ import stack.Symbol;
 
 import stack.Type;
 
-/** TDD for TEstStack.java
+/** TDD for TestStack.java
  * @author zfac237
  *
  */

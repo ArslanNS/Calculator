@@ -9,8 +9,8 @@ import java.util.List;
  *
  */
 public class Stack {
-  private int size = 0;
-  List<Entry> entries = new ArrayList<>();
+  int size = 0;
+  static List<Entry> entries = new ArrayList<>();
 
   /** Constructor for creating a stack with initial size of 0
    * This initialises an empty stack.
