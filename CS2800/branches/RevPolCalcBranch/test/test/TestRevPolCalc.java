@@ -2,11 +2,8 @@ package test;
 
 import static org.junit.Assert.assertEquals;
 
-import calculator.CalculatorFactory;
-
+import calculator.RevPolCalc;
 import org.junit.Test;
-
-import stack.NumStack;
 
 /** TDD for RevPolCalc.java
  * @author zfac237
@@ -19,8 +16,7 @@ public class TestRevPolCalc {
   @Test
   public void testFactoryAdd() { //TEST 43 - test to add two values with the RevPolCalc.
     RevPolCalc revPolCalc = new RevPolCalc();
-    float val = revPolCalc.evaluate("53+");
+    float val = revPolCalc.evaluate("5 3 +");
     assertEquals("the value returned was not correct", 8f, val, 0f);
   }
- 
 }
