@@ -1,6 +1,6 @@
 package stack;
 
-/**TDD for StrStack.java
+/**A stack of string values.
  * @author zfac237
  *
  */

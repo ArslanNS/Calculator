@@ -1,6 +1,6 @@
 package stack;
 
-/**TDD for NumStack.java
+/**A stack of float values.
  * @author zfac237
  *
  */
