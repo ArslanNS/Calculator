@@ -6,6 +6,10 @@ import operation.Multiply;
 import operation.Subtract;
 import stack.NumStack;
 
+/** Calculates numbers in a stack with a specific operator.
+ * @author zfac237
+ *
+ */
 public class CalculatorFactory { 
   
   /** class that operates on two values.
