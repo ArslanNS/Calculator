@@ -12,6 +12,6 @@ public class Divide implements Calculator {
    * @return float that is f1 divided by f2.
    */
   public float evaluate(float f1, float f2) {
-    return f1 / f2;
+    return f2 / f1;
   }
 }
