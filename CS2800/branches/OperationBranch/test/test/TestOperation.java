@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import operation.Addition;
 
+import operation.Subtract;
+
 import org.junit.Test;
 
 /** TDD for TestOperation.java
@@ -20,6 +22,16 @@ public class TestOperation {
     Addition add = new Addition();
     float val = add.evaluate(2f, 2f);
     assertEquals("add evaluate did not return 4 when adding 2 to 2.", 4f, val, 0f);
+  }
+  
+  /** Creates an add object then parses 5 and 2 into the evaluate method.
+   * The test checks if the value returned is the correctly subtracted value.
+   */
+  @Test
+  public void subtractionTest() { //TEST 35 - test to see if values are subtracted correctly.
+    Subtract sub = new Subtract();
+    float val = sub.evaluate(5f, 2f);
+    assertEquals("add evaluate did not return 3 when subtracting 5 by 2.", 3f, val, 0f);
   }
 
 }
