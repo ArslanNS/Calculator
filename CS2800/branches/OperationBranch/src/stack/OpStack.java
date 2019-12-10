@@ -1,6 +1,6 @@
 package stack;
 
-/**TDD for OpStack.java
+/**A stack of symbol values.
  * @author zfac237
  *
  */
