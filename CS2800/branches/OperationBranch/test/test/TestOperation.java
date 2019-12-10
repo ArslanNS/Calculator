@@ -29,7 +29,7 @@ public class TestOperation {
    * The test checks if the value returned is the correctly subtracted value.
    */
   @Test
-  public void subtractionTest() { //TEST 35 - test to see if values are subtracted correctly.
+  public void subtractionTest() { //TEST 36 - test to see if values are subtracted correctly.
     Subtract sub = new Subtract();
     float val = sub.evaluate(5f, 2f);
     assertEquals("subract evaluate did not return 3 when subtracting 5 by 2.", 3f, val, 0f);
@@ -39,7 +39,7 @@ public class TestOperation {
    * The test checks if the value returned is the correctly multiplied value.
    */
   @Test
-  public void multiplyTest() { //TEST 35 - test to see if values are multiplied correctly.
+  public void multiplyTest() { //TEST 37 - test to see if values are multiplied correctly.
     Multiply times = new Multiply();
     float val = times.evaluate(3f, 4f);
     assertEquals("multiply evaluate did not return 12 when multiplying 3 by 4.", 12f, val, 0f);
@@ -49,7 +49,7 @@ public class TestOperation {
    * The test checks if the value returned is the correctly divided value.
    */
   @Test
-  public void divideTest() { //TEST 35 - test to see if values are multiplied correctly.
+  public void divideTest() { //TEST 38 - test to see if values are multiplied correctly.
     Divide divide = new Divide();
     float val = divide.evaluate(10f, 2f);
     assertEquals("divide evaluate did not return 5 when dividing 10 by 2.", 5f, val, 0f);
