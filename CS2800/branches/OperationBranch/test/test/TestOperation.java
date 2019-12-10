@@ -3,6 +3,7 @@ package test;
 import static org.junit.Assert.assertEquals;
 
 import operation.Addition;
+import operation.Divide;
 import operation.Multiply;
 import operation.Subtract;
 
@@ -42,6 +43,16 @@ public class TestOperation {
     Multiply times = new Multiply();
     float val = times.evaluate(3f, 4f);
     assertEquals("multiply evaluate did not return 12 when multiplying 3 by 4.", 12f, val, 0f);
+  }
+  
+  /** Creates an divide object then parses 10 and 2 into the evaluate method.
+   * The test checks if the value returned is the correctly divided value.
+   */
+  @Test
+  public void divideTest() { //TEST 35 - test to see if values are multiplied correctly.
+    Divide divide = new Divide();
+    float val = divide.evaluate(10f, 2f);
+    assertEquals("divide evaluate did not return 5 when dividing 10 by 2.", 5f, val, 0f);
   }
 
 }
