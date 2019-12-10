@@ -2,6 +2,10 @@ package calculator;
 
 import stack.NumStack;
 
+/** Evaluates a string in RPN.
+ * @author zfac237
+ *
+ */
 public class RevPolCalc { 
   private CalculatorFactory revPolFact = new CalculatorFactory();
   private NumStack val = new NumStack();
