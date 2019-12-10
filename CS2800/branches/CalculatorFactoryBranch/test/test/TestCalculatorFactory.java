@@ -53,7 +53,7 @@ public class TestCalculatorFactory {
     value.push(4f);
     float val = calcFactory.calculatorEquations(value, symbol);
     assertEquals("the value returned was not correct.", 12f, val, 0f);
-  }multiplied
+  }
   
   /** Creates several objects and passes them to a factory object. 
    *  The test checks the calculatorEquation multiplies correctly. 
