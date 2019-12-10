@@ -14,16 +14,16 @@ public class CalculatorFactory {
    * @return float that is the two values which have been operated on
    */
   public float calculatorEquations(NumStack stack, String str) throws OperatorException {
-    if (str == "+") {
+    if (str.equals("+")) {
       Addition add = new Addition();
       return add.evaluate(stack.pop(), stack.pop());
-    } else if (str == "-") {
+    } else if (str.equals("-"))  {
       Subtract sub = new Subtract();
       return sub.evaluate(stack.pop(), stack.pop());
-    } else if (str == "*") {
+    } else if (str.equals("*"))  {
       Multiply times = new Multiply();
       return times.evaluate(stack.pop(), stack.pop());
-    } else if (str == "/") {
+    } else if (str.equals("/"))  {
       Divide divide = new Divide();
       return divide.evaluate(stack.pop(), stack.pop());
     } else {
