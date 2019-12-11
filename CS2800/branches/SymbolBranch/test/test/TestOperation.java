@@ -9,7 +9,7 @@ import operation.Subtract;
 
 import org.junit.Test;
 
-/** TDD for TestOperation.java
+/** TDD for all operations.
  * @author zfac237
  *
  */
