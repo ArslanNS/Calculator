@@ -27,9 +27,9 @@ public class TestStandardSymbols {
    */
   @Test
   public void minusSymbolTest() { //TEST 49 - test to see if plus is returned as symbol.
-    StandardSymbols add = new StandardSymbols();
-    Symbol sym = add.selector("+");
-    assertEquals("symbol returned was not '+'", Symbol.PLUS, sym);
+    StandardSymbols minus = new StandardSymbols();
+    Symbol sym = minus.selector("-");
+    assertEquals("symbol returned was not '-'", Symbol.MINUS, sym);
   }
   
   /** Test to check if selector method works.
@@ -37,9 +37,9 @@ public class TestStandardSymbols {
    */
   @Test
   public void divideSymbolTest() { //TEST 50 - test to see if plus is returned as symbol.
-    StandardSymbols add = new StandardSymbols();
-    Symbol sym = add.selector("+");
-    assertEquals("symbol returned was not '+'", Symbol.PLUS, sym);
+    StandardSymbols divide = new StandardSymbols();
+    Symbol sym = divide.selector("/");
+    assertEquals("symbol returned was not '/'", Symbol.DIVIDE, sym);
   }
   
   /** Test to check if selector method works.
@@ -47,9 +47,9 @@ public class TestStandardSymbols {
    */
   @Test
   public void timeSymbolTest() { //TEST 51 - test to see if plus is returned as symbol.
-    StandardSymbols add = new StandardSymbols();
-    Symbol sym = add.selector("+");
-    assertEquals("symbol returned was not '+'", Symbol.PLUS, sym);
+    StandardSymbols  = new StandardSymbols();
+    Symbol sym = time.selector("*");
+    assertEquals("symbol returned was not '('", Symbol.TIMES, sym);
   }
   
   /** Test to check if selector method works.
@@ -58,8 +58,8 @@ public class TestStandardSymbols {
   @Test
   public void riBracketSymbolTest() { //TEST 52 - test to see if plus is returned as symbol.
     StandardSymbols add = new StandardSymbols();
-    Symbol sym = add.selector("+");
-    assertEquals("symbol returned was not '+'", Symbol.PLUS, sym);
+    Symbol sym = add.selector(")");
+    assertEquals("symbol returned was not ')'", Symbol.RIGHT_BRACKET, sym);
   }
   
   /** Test to check if selector method works.
@@ -67,9 +67,19 @@ public class TestStandardSymbols {
    */
   @Test
   public void leBracketSymbolTest() { //TEST 53 - test to see if plus is returned as symbol. 
-    StandardSymbols add = new StandardSymbols();
-    Symbol sym = add.selector("+");
-    assertEquals("symbol returned was not '+'", Symbol.PLUS, sym);
+    StandardSymbols bracket = new StandardSymbols();
+    Symbol sym = bracket.selector("*");
+    assertEquals("symbol returned was not '*'", Symbol.LEFT_BRACKET, sym);
+  }
+  
+  /** 
+   * 
+   */
+  @Test
+  public void precedenceTest1() { //TEST 54 - test to see if correct precedence takes place
+    StandardSymbols pres = new StandardSymbols();
+    Boolean bool = pres.symbolPrecedence(Symbol.TIMES, Symbol.PLUS);
+    assertEquals("Precedence for times over plus was not correct.", true, bool);
   }
 
 }
