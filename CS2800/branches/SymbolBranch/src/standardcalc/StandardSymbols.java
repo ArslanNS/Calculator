@@ -25,5 +25,19 @@ public class StandardSymbols {
     } 
     return sym;
   }
+
+  /** Method makes certain symbols take precedence over other symbols.
+   * @param first symbol that should take precedence.
+   * @param second symbol that should be take precedence of.
+   * @return
+   */
+  public Boolean symbolPrecedence(Symbol first, Symbol second) {
+    if (first.getSymbol() == second.getSymbol() 
+        || first.getSymbol() == '*' && second.getSymbol() == '+') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
