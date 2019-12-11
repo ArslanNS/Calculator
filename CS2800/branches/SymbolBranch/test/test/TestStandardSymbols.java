@@ -47,7 +47,7 @@ public class TestStandardSymbols {
    */
   @Test
   public void timeSymbolTest() { //TEST 51 - test to see if plus is returned as symbol.
-    StandardSymbols  = new StandardSymbols();
+    StandardSymbols time = new StandardSymbols();
     Symbol sym = time.selector("*");
     assertEquals("symbol returned was not '('", Symbol.TIMES, sym);
   }
@@ -68,12 +68,12 @@ public class TestStandardSymbols {
   @Test
   public void leBracketSymbolTest() { //TEST 53 - test to see if plus is returned as symbol. 
     StandardSymbols bracket = new StandardSymbols();
-    Symbol sym = bracket.selector("*");
-    assertEquals("symbol returned was not '*'", Symbol.LEFT_BRACKET, sym);
+    Symbol sym = bracket.selector("(");
+    assertEquals("symbol returned was not '('", Symbol.LEFT_BRACKET, sym);
   }
   
-  /** 
-   * 
+  /** Test to check if correct precedence take place.
+   *  Test checks if Times takes precedence over plus.
    */
   @Test
   public void precedenceTest1() { //TEST 54 - test to see if correct precedence takes place
