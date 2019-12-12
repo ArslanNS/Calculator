@@ -2,11 +2,10 @@ package test;
 
 import static org.junit.Assert.assertEquals;
 
-import calculator.CalculatorFactory;
+import calculator.CalcModel;
 
 import org.junit.Test;
 
-import stack.NumStack;
 
 /** TDD for CalcModel.java
  * @author zfac237
@@ -19,7 +18,7 @@ public class TestCalcModel {
   @Test
   public void testInfix() { //TEST 67 - test to check if equation is solved in infix.
     CalcModel calcModel = new CalcModel();
-    float val = calcModel.evaluate("( 5 + 5 )", true)
+    float val = calcModel.evaluate("( 5 + 5 )", true);
     assertEquals("the value returned was not correct", 10, val, 0f);
   }
   
@@ -29,7 +28,7 @@ public class TestCalcModel {
   @Test
   public void testPostfix() { //TEST 67 - test to check if equation is solved in postfix.
     CalcModel calcModel = new CalcModel();
-    float val = calcModel.evaluate("5 + 5 - 6", true)
+    float val = calcModel.evaluate("5 + 5 - 6", true);
     assertEquals("the value returned was not correct", 4, val, 0f);
   }
 }
