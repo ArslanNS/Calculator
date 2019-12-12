@@ -33,7 +33,11 @@ public class StandardSymbols {
    */
   public Boolean symbolPrecedence(Symbol first, Symbol second) {
     if (first.getSymbol() == second.getSymbol() 
-        || first.getSymbol() == '*' && second.getSymbol() == '+') {
+        || first.getSymbol() == '*' && second.getSymbol() == '+'
+        || first.getSymbol() == '*' && second.getSymbol() == '-') {
+      return true;
+    } else if (first.getSymbol() == '/' && second.getSymbol() == '+'
+        || first.getSymbol() == '/' && second.getSymbol() == '-') {
       return true;
     } else {
       return false;
