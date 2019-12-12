@@ -82,4 +82,34 @@ public class TestStandardSymbols {
     assertEquals("Precedence for times over plus was not correct.", true, bool);
   }
 
+  /** Test to check if correct precedence take place.
+   *  Test checks if Times takes precedence over minus.
+   */
+  @Test
+  public void precedenceTest2() { //TEST 55 - test to see if correct precedence takes place
+    StandardSymbols pres = new StandardSymbols();
+    Boolean bool = pres.symbolPrecedence(Symbol.TIMES, Symbol.MINUS);
+    assertEquals("Precedence for times over minus was not correct.", true, bool);
+  }
+  
+  /** Test to check if correct precedence take place.
+   *  Test checks if divide takes precedence over plus.
+   */
+  @Test
+  public void precedenceTest3() { //TEST 56 - test to see if correct precedence takes place
+    StandardSymbols pres = new StandardSymbols();
+    Boolean bool = pres.symbolPrecedence(Symbol.DIVIDE, Symbol.PLUS);
+    assertEquals("Precedence for divide over plus was not correct.", true, bool);
+  }
+  
+  /** Test to check if correct precedence take place.
+   *  Test checks if divide takes precedence over minus.
+   */
+  @Test
+  public void precedenceTest4() { //TEST 57 - test to see if correct precedence takes place
+    StandardSymbols pres = new StandardSymbols();
+    Boolean bool = pres.symbolPrecedence(Symbol.DIVIDE, Symbol.MINUS);
+    assertEquals("Precedence for divide over minus was not correct.", true, bool);
+  }
+
 }
