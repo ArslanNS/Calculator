@@ -20,7 +20,7 @@ public class TestStrStack {
   @Test
   public void strStackPushTest() { // TEST 33 - Pushing a symbol test.
     StrStack test = new StrStack();
-    test.push("hello world");
+    test.push("hello worldd");
     assertFalse("isEmpty() method did not return false for a non-empty stack", test.isEmpty());
   }
 
@@ -28,10 +28,10 @@ public class TestStrStack {
    * The test checks if the value pushed is equal to "hello world".
    */
   @Test
-  public void stackStackPopTest() { // TEST 34 - Removing a value test.
-    StrStack test = new StrStack();
-    test.push("hello world");
-    String stringPop = test.pop();
+  public void strStackPopTest() { // TEST 34 - Removing a value test.
+    StrStack test2 = new StrStack();
+    test2.push("hello world");
+    String stringPop = test2.pop();
     assertEquals("hello world not popped' ","hello world", String.valueOf(stringPop.toString()));
   }
 }
