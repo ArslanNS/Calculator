@@ -111,5 +111,27 @@ public class TestStandardSymbols {
     Boolean bool = pres.symbolPrecedence(Symbol.DIVIDE, Symbol.MINUS);
     assertEquals("Precedence for divide over minus was not correct.", true, bool);
   }
+  
+  /** Test to check if correct precedence take place.
+   *  Test to make sure plus has the same precedence as minus.
+   */
+  @Test
+  public void precedenceTest5() { //TEST 58 - test to see if correct precedence takes place
+    StandardSymbols pres = new StandardSymbols();
+    Boolean bool = pres.symbolPrecedence(Symbol.PLUS, Symbol.MINUS);
+    bool = pres.symbolPrecedence(Symbol.MINUS, Symbol.PLUS);
+    assertEquals("Precedence for divide and times was not the same.", true, bool);
+  }
+  
+  /** Test to check if correct precedence take place.
+   *  Test to make sure divide has the same precedence as times.
+   */
+  @Test
+  public void precedenceTest6() { //TEST 59 - test to see if correct precedence takes place
+    StandardSymbols pres = new StandardSymbols();
+    Boolean bool = pres.symbolPrecedence(Symbol.DIVIDE, Symbol.TIMES);
+    bool = pres.symbolPrecedence(Symbol.TIMES, Symbol.DIVIDE);
+    assertEquals("Precedence for plus and minus was not the same.", true, bool);
+  }
 
 }
