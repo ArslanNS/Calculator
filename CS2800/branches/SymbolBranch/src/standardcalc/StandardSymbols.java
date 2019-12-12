@@ -39,6 +39,12 @@ public class StandardSymbols {
     } else if (first.getSymbol() == '/' && second.getSymbol() == '+'
         || first.getSymbol() == '/' && second.getSymbol() == '-') {
       return true;
+    } else if (first.getSymbol() == '/' && second.getSymbol() == '*'
+        || first.getSymbol() == '*' && second.getSymbol() == '/') {
+      return true;
+    } else if (first.getSymbol() == '+' && second.getSymbol() == '-'
+        || first.getSymbol() == '-' && second.getSymbol() == '+') {
+      return true;
     } else {
       return false;
     }  
