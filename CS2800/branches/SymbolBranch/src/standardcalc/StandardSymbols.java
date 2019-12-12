@@ -41,7 +41,7 @@ public class StandardSymbols {
       return true;
     } else {
       return false;
-    }
+    }  
   }
 }
 
