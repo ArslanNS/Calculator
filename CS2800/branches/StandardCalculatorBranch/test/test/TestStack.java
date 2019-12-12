@@ -71,6 +71,7 @@ public class TestStack {
   @Test
   public void floatPopTest() { // TEST 22 - Popping a Float test.
     Stack test = new Stack();
+    test.push(new Entry(56.25f));
     test.push(new Entry(42.43f));
     Entry floatPop = test.pop();
     assertEquals("Value popped does not equal 42.43",42.43f, floatPop.getFloat(), 0.0f);
