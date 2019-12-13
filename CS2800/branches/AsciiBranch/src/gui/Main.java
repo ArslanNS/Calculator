@@ -33,11 +33,26 @@ public class Main extends Application {
    * @throws IOException when the input can be incorrect.
    */
   public static void main(String[] args) throws IOException {
-    loader = new FXMLLoader(Main.class.getResource("Gui.fxml"));
-    root = loader.load();
-    myView = loader.getController();
-    new Controller(myView);
-    launch(args);
+    Boolean isAscii = true;
     
+    if (System.console() != null) {
+      isAscii = true;
+    }
+    
+    if (isAscii) {
+      myView = new AsciiView();
+    } else {
+      loader = new FXMLLoader(Main.class.getResource("Gui.fxml"));
+      root = loader.load();
+      myView = loader.getController();
+    }
+    new Controller(myView);
+    
+    if (isAscii) {
+      ((AsciiView) myView).menu();
+      System.exit(0);
+    } else {
+      launch(args);
+    } 
   }
 }
