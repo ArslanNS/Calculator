@@ -9,8 +9,8 @@ import java.util.List;
  *
  */
 public class Stack {
-  int size = 0;
-  static List<Entry> entries = new ArrayList<>();
+  private int size = 0;
+  List<Entry> entries = new ArrayList<>();
 
   /** Constructor for creating a stack with initial size of 0
    * This initialises an empty stack.
@@ -69,7 +69,7 @@ public class Stack {
     if (size <= 0) {
       throw new EmptyStackException("Stack is empty");
     } else {
-      Entry last = entries.remove(size - 1);
+      Entry last = entries.get(size - 1);
       return last;
     }
   }

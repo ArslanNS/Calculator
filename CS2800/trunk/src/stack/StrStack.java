@@ -5,12 +5,13 @@ package stack;
  *
  */
 public class StrStack {
-  Stack strStack = new Stack();
-
+  Stack strStack;
+  
   /** Constructor for creating a stack with initial size of 0
    * This initialises an empty stack.
    */
   public StrStack() {
+    strStack = new Stack();
   }
 
   /** Inserts a entry object to the stack using the push method from stack.
