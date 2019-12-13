@@ -12,7 +12,7 @@ public class CalcModel {
 
   /**method evaluates the equation in the chosen methods.
    * @param str that is the equation
-   * @param bool which decides whether the equation will be solved in infix or postfix
+   * @param bool which decides whether the equation will be solved in infix or postfix.
    * @return the answer of the evaluation
    */
   public float evaluate(String str, boolean bool) {
