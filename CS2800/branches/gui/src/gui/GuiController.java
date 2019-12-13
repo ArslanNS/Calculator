@@ -13,7 +13,15 @@ import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 
 
+/** Class to handle events.
+ * @author zfac237
+ *
+ */
 public class GuiController implements ViewInterface {
+  
+  /** Checks if a new action has happened
+   * then updates the observer.
+   */
   public void calcObserver(Observer observer) {
     calculate.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -24,6 +32,9 @@ public class GuiController implements ViewInterface {
     });
   }
 
+  /** toggles between INFIX and POSTFIX.
+   *
+   */
   public void typeObserver(Consumer<OpType> consumer) {
     postOrIn.selectedToggleProperty().addListener(
         new ChangeListener<Toggle>() {
@@ -35,14 +46,23 @@ public class GuiController implements ViewInterface {
         });
   }
 
+  /** returns the expression TextField variable to what the user input.
+   *
+   */
   public String getExpression() {
     return equation.getText();
   }
 
+  /** sets the answer TextField variable to what was calculated.
+   * it is then displayed in the TextField.
+   */
   public void setAnswer(String a) {
     answer.setText(a);
   }
   
+  /** checks whether the infix button is selected.
+   * if it is then returns true.
+   */
   @Override
   public boolean isInfix() {
     if (infixButton.isSelected()) {
