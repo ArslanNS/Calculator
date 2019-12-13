@@ -6,12 +6,13 @@ package stack;
  */
 public class OpStack {
   Stack opStack = new Stack();
-
+  int size = 0;
 
   /** Constructor for creating a stack with initial size of 0
    * This initialises an empty stack.
    */
   public OpStack() {
+    opStack = new Stack();
   }
 
   /** Inserts a Symbol object to the stack using the push method from stack.
@@ -34,6 +35,15 @@ public class OpStack {
    */
   public Symbol pop() throws EmptyStackException {
     Entry symbolval = opStack.pop();
+    return symbolval.getSymbol();
+  }
+  
+  /** returns the last value on the stack and converts value to string using getSymbol.
+   * @return The last Entry object in the stack.
+   * @throws EmptyStackException stack is 0 or below then the stack is empty and you cannot pop.
+   */
+  public Symbol top() throws EmptyStackException {
+    Entry symbolval = opStack.top();
     return symbolval.getSymbol();
   }
 }
