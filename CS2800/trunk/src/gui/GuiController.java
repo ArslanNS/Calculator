@@ -72,7 +72,6 @@ public class GuiController implements ViewInterface {
     }
   }
   
-  
   @FXML
     private TextField equation;
 
